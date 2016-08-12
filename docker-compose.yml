@@ -7,7 +7,7 @@ services:
         - https_proxy=${https_proxy}
         - HUBOT_NAME=mmbot
         - HUBOT_OWNER=none
-        - HUBOT_DESCRIPTION="Hubot with matteruser adapter"
+        - HUBOT_DESCRIPTION=Hubot with matteruser adapter
       context: .
     environment:
       - MATTERMOST_HOST=192.168.99.100
