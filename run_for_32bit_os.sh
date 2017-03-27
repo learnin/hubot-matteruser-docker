@@ -18,5 +18,6 @@ docker container run \
   -e 'TZ=Asia/Tokyo' \
   --name hubotmatteruserdocker_hubot_1 \
   --restart always \
+  -v /etc/localtime:/etc/localtime:ro \
   -v hubotmatteruserdocker-data:/home/hubot \
   hubotmatteruserdocker_hubot

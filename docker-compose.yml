@@ -22,6 +22,7 @@ services:
       - TZ=Asia/Tokyo
     restart: always
     volumes:
+      - /etc/localtime:/etc/localtime:ro
       - data:/home/hubot
 volumes:
   data: {}
