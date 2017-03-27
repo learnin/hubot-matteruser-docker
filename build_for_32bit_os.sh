@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker build -t hubotmatteruserdocker_hubot \
+docker image build -t hubotmatteruserdocker_hubot \
   --build-arg http_proxy=$http_proxy \
   --build-arg https_proxy=$https_proxy \
   --build-arg HUBOT_NAME=mmbot \

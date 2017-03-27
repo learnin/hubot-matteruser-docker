@@ -4,7 +4,7 @@
 docker volume create --name hubotmatteruserdocker-data
 
 # master
-docker run \
+docker container run \
   -d \
   -e MATTERMOST_HOST=192.168.99.100 \
   -e MATTERMOST_GROUP=mmtest1 \
