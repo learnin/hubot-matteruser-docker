@@ -13,7 +13,7 @@ docker container run \
   -e MATTERMOST_WSS_PORT=80 \
   -e MATTERMOST_TLS_VERIFY=false \
   -e MATTERMOST_USE_TLS=false \
-  -e HUBOT_JENKINS_URL=http://192.168.99.100:8080 \
+  -e HUBOT_JENKINS_URL=http://192.168.99.100:50001 \
   -e HUBOT_JENKINS_AUTH=admin:admin \
   -e 'TZ=Asia/Tokyo' \
   --name hubotmatteruserdocker_app_1 \
