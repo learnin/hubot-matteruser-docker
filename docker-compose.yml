@@ -1,6 +1,6 @@
 version: '3'
 services:
-  hubot:
+  app:
     build:
       args:
         - http_proxy=${http_proxy}

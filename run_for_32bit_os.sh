@@ -3,7 +3,7 @@
 # data volume
 docker volume create --name hubotmatteruserdocker-data
 
-# master
+# app
 docker container run \
   -d \
   -e MATTERMOST_HOST=192.168.99.100 \
@@ -16,8 +16,8 @@ docker container run \
   -e HUBOT_JENKINS_URL=http://192.168.99.100:8080 \
   -e HUBOT_JENKINS_AUTH=admin:admin \
   -e 'TZ=Asia/Tokyo' \
-  --name hubotmatteruserdocker_hubot_1 \
+  --name hubotmatteruserdocker_app_1 \
   --restart always \
   -v /etc/localtime:/etc/localtime:ro \
   -v hubotmatteruserdocker-data:/home/hubot \
-  hubotmatteruserdocker_hubot
+  hubotmatteruserdocker_app
