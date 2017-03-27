@@ -20,6 +20,7 @@ services:
       - HUBOT_JENKINS_URL=http://192.168.99.100:8080
       - HUBOT_JENKINS_AUTH=admin:admin
       - TZ=Asia/Tokyo
+    restart: always
     volumes:
       - data:/home/hubot
 volumes:

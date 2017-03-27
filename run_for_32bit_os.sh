@@ -17,5 +17,6 @@ docker container run \
   -e HUBOT_JENKINS_AUTH=admin:admin \
   -e 'TZ=Asia/Tokyo' \
   --name hubotmatteruserdocker_hubot_1 \
+  --restart always \
   -v hubotmatteruserdocker-data:/home/hubot \
   hubotmatteruserdocker_hubot
