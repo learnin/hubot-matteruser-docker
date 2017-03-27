@@ -10,7 +10,7 @@ docker container run \
   -e MATTERMOST_GROUP=mmtest1 \
   -e MATTERMOST_USER=hubottest@example.jp \
   -e MATTERMOST_PASSWORD=hubottest \
-  -e MATTERMOST_WSS_PORT=80 \
+  -e MATTERMOST_WSS_PORT=50002 \
   -e MATTERMOST_TLS_VERIFY=false \
   -e MATTERMOST_USE_TLS=false \
   -e HUBOT_JENKINS_URL=http://192.168.99.100:50001 \
