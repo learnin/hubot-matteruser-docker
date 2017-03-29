@@ -6,15 +6,16 @@ docker volume create --name hubotmatteruserdocker-data
 # app
 docker container run \
   -d \
-  -e MATTERMOST_HOST=192.168.99.100 \
-  -e MATTERMOST_GROUP=mmtest1 \
-  -e MATTERMOST_USER=hubottest@example.jp \
-  -e MATTERMOST_PASSWORD=hubottest \
-  -e MATTERMOST_WSS_PORT=50002 \
-  -e MATTERMOST_TLS_VERIFY=false \
-  -e MATTERMOST_USE_TLS=false \
-  -e HUBOT_JENKINS_URL=http://192.168.99.100:50001 \
-  -e HUBOT_JENKINS_AUTH=admin:admin \
+  -e MATTERMOST_HOST=${MATTERMOST_HOST} \
+  -e MATTERMOST_GROUP=${MATTERMOST_GROUP} \
+  -e MATTERMOST_USER=${MATTERMOST_USER} \
+  -e MATTERMOST_PASSWORD=${MATTERMOST_PASSWORD} \
+  -e MATTERMOST_HTTP_PORT=${MATTERMOST_HTTP_PORT} \
+  -e MATTERMOST_WSS_PORT=${MATTERMOST_WSS_PORT} \
+  -e MATTERMOST_TLS_VERIFY=${MATTERMOST_TLS_VERIFY} \
+  -e MATTERMOST_USE_TLS=${MATTERMOST_USE_TLS} \
+  -e HUBOT_JENKINS_URL=${HUBOT_JENKINS_URL} \
+  -e HUBOT_JENKINS_AUTH=${HUBOT_JENKINS_AUTH} \
   -e 'TZ=Asia/Tokyo' \
   --name hubotmatteruserdocker_app_1 \
   --restart always \
