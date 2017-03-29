@@ -18,21 +18,6 @@ RUN yo hubot --adapter matteruser --owner="${HUBOT_OWNER}" --name=${HUBOT_NAME} 
   sed -i /redis-brain/d ./external-scripts.json && \
   npm install hubot-scripts
 
-ENV MATTERMOST_HOST=192.168.99.100 \
-  MATTERMOST_GROUP=mmTeamName \
-  MATTERMOST_USER=mmUser \
-  MATTERMOST_PASSWORD=mmPassword \
-  MATTERMOST_WSS_PORT=80 \
-  MATTERMOST_TLS_VERIFY=false \
-  MATTERMOST_USE_TLS=false \
-  HUBOT_JENKINS_URL=http://192.168.99.100:50001 \
-  HUBOT_JENKINS_AUTH=admin:admin
-
 ADD hubot-scripts.json /home/hubot/
-
-# apply mattermost-client patch
-ADD client.coffee /home/hubot/node_modules/mattermost-client/src/
-ADD package.json /home/hubot/node_modules/mattermost-client/
-RUN (cd /home/hubot/node_modules/mattermost-client && npm install)
 
 CMD /home/hubot/bin/hubot -n ${HUBOT_NAME} -a matteruser
