@@ -18,7 +18,7 @@ docker container run \
   -e HUBOT_JENKINS_AUTH=${HUBOT_JENKINS_AUTH} \
   -e 'TZ=Asia/Tokyo' \
   --name hubotmatteruserdocker_app_1 \
-  --restart always \
+  --restart unless-stopped \
   -v /etc/localtime:/etc/localtime:ro \
   -v hubotmatteruserdocker-data:/home/hubot \
   hubotmatteruserdocker_app

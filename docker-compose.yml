@@ -21,7 +21,7 @@ services:
       - HUBOT_JENKINS_URL=${HUBOT_JENKINS_URL}
       - HUBOT_JENKINS_AUTH=${HUBOT_JENKINS_AUTH}
       - TZ=Asia/Tokyo
-    restart: always
+    restart: unless-stopped
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - data:/home/hubot
