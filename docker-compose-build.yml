@@ -1,6 +1,14 @@
 version: '3'
 services:
   app:
+    build:
+      args:
+        - http_proxy=${http_proxy}
+        - https_proxy=${https_proxy}
+        - HUBOT_NAME=mmbot
+        - HUBOT_OWNER=none
+        - HUBOT_DESCRIPTION=Hubot with matteruser adapter
+      context: .
     environment:
       - MATTERMOST_HOST=${MATTERMOST_HOST}
       - MATTERMOST_GROUP=${MATTERMOST_GROUP}
@@ -13,7 +21,6 @@ services:
       - HUBOT_JENKINS_URL=${HUBOT_JENKINS_URL}
       - HUBOT_JENKINS_AUTH=${HUBOT_JENKINS_AUTH}
       - TZ=Asia/Tokyo
-    image: learnin/hubot-mattermost
     restart: unless-stopped
     volumes:
       - /etc/localtime:/etc/localtime:ro

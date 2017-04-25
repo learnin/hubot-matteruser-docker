@@ -21,4 +21,4 @@ docker container run \
   --restart unless-stopped \
   -v /etc/localtime:/etc/localtime:ro \
   -v hubotmatteruserdocker-data:/home/hubot \
-  hubotmatteruserdocker_app
+  learnin/hubot-mattermost
